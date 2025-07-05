@@ -125,7 +125,7 @@ CREATE TABLE NotaFiscal (
 CREATE TABLE Faturamento (
     codFaturamento INT AUTO_INCREMENT PRIMARY KEY,
     codEntrega INT NOT NULL,
-    codNFe INT,
+    codNFe INT NOT NULL,
     FOREIGN KEY (codNFe) REFERENCES NotaFiscal(codNFe),
     FOREIGN KEY (codEntrega) REFERENCES Entrega(codEntrega)
 );
